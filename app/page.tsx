@@ -1,103 +1,91 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { FaTelegramPlane, FaInstagram, FaPhone } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white px-4 py-8">
+      <motion.h1
+        className="text-5xl md:text-7xl font-extrabold text-center text-transparent animate-shine"
+        initial={{ opacity: 0, y: -60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        ItKurs.uz
+      </motion.h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+
+
+
+      <motion.p
+        className="mt-6 text-lg md:text-xl text-center text-gray-300 max-w-2xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        Siz yaratadigan kelajak uchun mukammal boshlanish. <br />
+        <span className="text-white font-semibold">ItKurs.uz — professional onlayn ta'lim loyihasi yoki IT platforma uchun ideal domen.</span>
+      </motion.p>
+
+      <motion.div
+        className="mt-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md shadow-lg px-8 py-6 max-w-xl w-full"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold text-gray-100 mb-4 text-center">Nega aynan ushbu domen?</h2>
+        <ul className="space-y-3 text-base text-gray-300">
+          <li>✔️ Domen qisqa, tushunarli va professional ko‘rinadi</li>
+          <li>✔️ SEO uchun mos (asosiy so‘zlar: <i>IT</i>, <i>Kurs</i>)</li>
+          <li>✔️ O‘z brendingizni yaratish uchun mustahkam asos</li>
+          <li>✔️ .uz zonasi — mahalliy ishonch va obro‘</li>
+        </ul>
+      </motion.div>
+
+      <motion.div
+        className="mt-10 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.6 }}
+      >
+        <p className="text-lg md:text-xl text-white font-medium mb-4">
+          Domen sotuvda. Taklifingiz bormi?
+        </p>
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+998770099136"
+            className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-full flex items-center gap-2 text-white text-base"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            <FaPhone /> +998 77 009 91 36
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://t.me/odilkrmv"
             target="_blank"
-            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-full flex items-center gap-2 text-white text-base"
           >
-            Read our docs
+            <FaTelegramPlane /> @odilkrmv
+          </a>
+          <a
+            href="https://instagram.com/odilkarimov"
+            target="_blank"
+            className="bg-pink-600 hover:bg-pink-700 transition px-6 py-3 rounded-full flex items-center gap-2 text-white text-base"
+          >
+            <FaInstagram /> @odilkarimov
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </motion.div>
+
+      <motion.p
+        className="mt-10 text-sm text-gray-500 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+      >
+        Unutmang, bu domen — noyob imkoniyat. Faqat eng tez va aqlli qaror qabul qilganlar uchun.
+      </motion.p>
+    </main>
   );
-}
+};
+
+export default Home;
