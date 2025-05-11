@@ -25,7 +25,7 @@ const Home = () => {
         transition={{ delay: 0.5, duration: 1 }}
       >
         Siz yaratadigan kelajak uchun mukammal boshlanish. <br />
-        <span className="text-white font-semibold">ItKurs.uz — professional onlayn ta'lim loyihasi yoki IT platforma uchun ideal domen.</span>
+        <span className="text-white font-semibold">ItKurs.uz — professional onlayn ta&apos;lim loyihasi yoki IT platforma uchun ideal domen.</span>
       </motion.p>
 
       <motion.div
