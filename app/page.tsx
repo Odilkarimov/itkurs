@@ -65,7 +65,7 @@ const Home = () => {
             target="_blank"
             className="bg-pink-600 hover:bg-pink-700 transition px-6 py-3 rounded-full flex items-center gap-2 text-white text-base"
           >
-            <FaInstagram /> @odilkarimov
+            <FaInstagram /> @odilkarimovv
           </a>
         </div>
       </motion.div>
