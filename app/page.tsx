@@ -14,10 +14,6 @@ const Home = () => {
       >
         ItKurs.uz
       </motion.h1>
-
-
-
-
       <motion.p
         className="mt-6 text-lg md:text-xl text-center text-gray-300 max-w-2xl"
         initial={{ opacity: 0 }}
@@ -27,7 +23,6 @@ const Home = () => {
         Siz yaratadigan kelajak uchun mukammal boshlanish. <br />
         <span className="text-white font-semibold">ItKurs.uz — professional onlayn ta&apos;lim loyihasi yoki IT platforma uchun ideal domen.</span>
       </motion.p>
-
       <motion.div
         className="mt-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md shadow-lg px-8 py-6 max-w-xl w-full"
         initial={{ opacity: 0, y: 30 }}
@@ -42,7 +37,6 @@ const Home = () => {
           <li>✔️ .uz zonasi — mahalliy ishonch va obro‘</li>
         </ul>
       </motion.div>
-
       <motion.div
         className="mt-10 text-center"
         initial={{ opacity: 0 }}
@@ -75,7 +69,6 @@ const Home = () => {
           </a>
         </div>
       </motion.div>
-
       <motion.p
         className="mt-10 text-sm text-gray-500 text-center"
         initial={{ opacity: 0 }}
