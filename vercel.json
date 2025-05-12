@@ -1,3 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.itkurs.uz"
+        }
+      ],
+      "destination": "https://itkurs.uz",
+      "permanent": true
+    }
+  ]
 }
